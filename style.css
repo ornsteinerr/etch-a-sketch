@@ -1,0 +1,10 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    border-color:black;
+    border-style: solid;
+
+}
