@@ -1,10 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(146, 212, 238, 0.822);
+    font-family: Roboto, sans-serif;
+    padding: 20px;
+}
+
+.squareInputArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider{
+    width: 100%;
+    outline: none;
+    opacity: 0.7;
+}
+
+
+#numSquareSet{
+    margin: 0px 0px 10px 0px;
+    font-size: 24px;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
 }
 
-.square {
-    border-color:black;
-    border-style: solid;
+.squareInput{
+    padding: 10px 0px;
+}
 
+#numSquareInput {
+    font-size: 24px;
+}
+
+.square {
+    border-color:rgba(184, 174, 174, 0.548);
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(240, 235, 235);
+    box-sizing: border-box;
 }
