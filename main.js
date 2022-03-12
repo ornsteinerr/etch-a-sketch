@@ -69,6 +69,11 @@ function initiateDivs(numDivs){
     grid.style.width = GRID_WIDTH + 'px';;
     grid.style.height = GRID_WIDTH + 'px';;
 
+    // Disable dragging
+    grid.ondragstart = () => {
+        return false;
+    }
+
     // Generate squares
     for (let i = 0; i < Math.pow(numDivs, 2); i++){
         const squareDiv = document.createElement('div');
@@ -76,6 +81,10 @@ function initiateDivs(numDivs){
         squareDiv.style.minWidth = (GRID_WIDTH / numDivs) + "px";
         squareDiv.style.minHeight = (GRID_WIDTH / numDivs) + "px";
         squareDiv.classList.add('square');
+        // Disable dragging
+        squareDiv.ondragstart = () => {
+            return false;
+        }
         // Add square
         grid.appendChild(squareDiv);
     }
@@ -87,6 +96,10 @@ function initiateDivs(numDivs){
         square.addEventListener('click', changeColor);
         })
     
+    // Disable dragging
+    grid.ondragstart = () => {
+        return false;
+    }
     
     // Set grid active to true
     isGridActive = true;
