@@ -11,10 +11,15 @@
 <body>
     <h1>Etch-A-Sketch</h1> 
     <div class="squareInputArea"> 
-        <label for="numSquareInput"> Number of squares on each side </label>
-        <input type="range" id="numSquareInput" class="slider" min="2" max="32" value="16">
-        <p>Value: <span id="numSquares">16</span></p>
-        <button id="numSquareSet"> Set </button>
+        <label for="numSquareInput"> <span id="numSquares">16 x 16</span></p> </label>
+        <input type="range" id="numSquareInput" class="slider" min="1" max="32" value="16">
+            <button id="numSquareSetButton"> Set </button>
+    </div>
+    <div id="tools" class="hidden">
+        <button id="clearButton">Reset Grid</button>
+        <button id="chooseColorButton"> Choose Color </button>
+        <button id="colorButton" name="color"> Color</button>
+        <button id="eraseButton" name="erase"> Erase </button>
     </div>
     <div class="grid"></div>
 </body>
