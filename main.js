@@ -3,7 +3,6 @@ let numDivs;
 let isGridActive = false;
 let mode = "rainbow";
 const GRID_WIDTH = 1000;
-const DEFAULT_COLOR = "rgb(240, 235, 235)";
 
 /* Event listeners */
 
@@ -13,7 +12,6 @@ numSquareSetButton.addEventListener('click', initiateDivs);
 
 // Slider listener
 const numSquareInput = document.getElementById('numSquareInput');
-numDivs = document.getElementById('numSquareInput').value;
 const numSquares = document.getElementById('numSquares');
 numSquareInput.addEventListener("input", function(){
     // Update slider value
@@ -35,17 +33,11 @@ body.addEventListener('mouseup', function(){
 const clearButton = document.querySelector("#clearButton");
 clearButton.addEventListener("click", clearColors);
 
-// Erase listener
-const eraseButton = document.querySelector("#eraseButton");
-eraseButton.addEventListener("click", setMode);
-
-// Rainbow listener
-const rainbowButton = document.querySelector("#rainbowButton");
-rainbowButton.addEventListener("click", setMode);
-
-// Color listener
-const colorButton = document.querySelector("#colorButton");
-colorButton.addEventListener("click", setMode);
+// Mode listeners
+const modeButton = document.querySelectorAll('.mode');
+modeButton.forEach((button) => {
+    button.addEventListener('click', setMode);
+})
 
 // Color picker listener
 const colorPicker = document.querySelector("#colorPicker");
@@ -152,7 +144,6 @@ function clearColors(){
         square.style.backgroundColor = '';
     })
 }
-
 
 
 /* Calculator functions */
