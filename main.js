@@ -47,6 +47,13 @@ rainbowButton.addEventListener("click", setMode);
 const colorButton = document.querySelector("#colorButton");
 colorButton.addEventListener("click", setMode);
 
+// Color picker listener
+const colorPicker = document.querySelector("#colorPicker");
+colorPicker.addEventListener('change', function(){
+    // Automatically select color mode if a color is picked
+    colorButton.click();
+})
+
 /* Functions */
 
 function initiateDivs(numDivs){
