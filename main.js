@@ -1,7 +1,7 @@
 /* Variables */
 let numDivs;
 let isGridActive = false;
-let mode = "color";
+let mode = "rainbow";
 const GRID_WIDTH = 1000;
 const DEFAULT_COLOR = "rgb(240, 235, 235)";
 
@@ -38,6 +38,10 @@ clearButton.addEventListener("click", clearColors);
 // Erase listener
 const eraseButton = document.querySelector("#eraseButton");
 eraseButton.addEventListener("click", setMode);
+
+// Rainbow listener
+const rainbowButton = document.querySelector("#rainbowButton");
+rainbowButton.addEventListener("click", setMode);
 
 // Color listener
 const colorButton = document.querySelector("#colorButton");
@@ -101,11 +105,15 @@ function changeColor(e){
         return;
     }
     switch (mode){
-        case "color":
+        case "rainbow":
             this.style.backgroundColor = '#' + getRandomColor();
             return;
         case "erase":
             this.style.backgroundColor = "";
+            return;
+        case "color":
+            let selectedColor = document.getElementById("colorPicker").value;
+            this.style.backgroundColor = selectedColor;
             return;
     }
 }
