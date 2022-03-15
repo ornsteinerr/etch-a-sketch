@@ -1,3 +1,5 @@
+/* General element styling */ 
+
 body {
     display: flex;
     flex-direction: column;
@@ -8,6 +10,18 @@ body {
     color: rgb(47, 44, 44);
     padding: 20px;
 }
+
+label{
+    padding: 0px;
+    margin: 0px;
+}
+
+button{
+    margin: 0px 0px 10px 0px;
+    font-size: 24px;
+}
+
+/* Specific styles */
 
 .squareInputArea{
     display: flex;
@@ -22,20 +36,12 @@ body {
     opacity: 0.7;
 }
 
-button{
-    margin: 0px 0px 10px 0px;
-    font-size: 24px;
-}
 
 .grid {
     display: flex;
     flex-wrap: wrap;
 }
 
-label{
-    padding: 0px;
-    margin: 0px;
-}
 
 .squareInputArea{
     margin: 20px;
@@ -52,6 +58,8 @@ label{
     background-color: rgb(240, 235, 235);
     box-sizing: border-box;
 }
+
+/* Conditional styling */
 
 .hidden {
     display: none;
